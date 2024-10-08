@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div ><ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>Mapa</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <!-- Contenedor para la imagen y el formulario -->
+    <div class="container">
+      
+      <!-- Imagen arriba -->
+      <div class="image-container">
+        <img src="assets/img/mapa.png" alt="Imagen del mapa" class="image" />
+      </div>
+  
+      <!-- Formulario debajo de la imagen -->
+      <div class="form-container">
+        <ion-list>
+          <!-- Campo de Hora de inicio del viaje -->
+          <ion-item>
+            <ion-label position="floating">Hora inicio viaje</ion-label>
+            <ion-input type="time"></ion-input>
+          </ion-item>
+  
+          <!-- Campo de destino -->
+          <ion-item>
+            <ion-label position="floating">Destino</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+  
+          <!-- Campo de tarifa -->
+          <ion-item>
+            <ion-label position="floating">Tarifa</ion-label>
+            <ion-input type="number" min="0"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-button routerLink="/conductor" expand="full">Crear Viaje</ion-button>
+      </div>
+  
+    </div>
+  </ion-content>
+  </div>
+  <div ></div>
+</ion-content>

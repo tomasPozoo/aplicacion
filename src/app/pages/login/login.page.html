@@ -6,24 +6,17 @@
 
 <ion-content>
 
-  <form [formGroup]="usuario" (ngSubmit)="ingresar()">
-
-    <ion-card>
-
-      <ion-item>
-        <img src="../../../assets/img/login.webp" alt="">
-        <ion-label position="stacked">Correo</ion-label>
-        <ion-input formControlName="correo" type="email" placeholder="Ingrese correo"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label position="stacked">Contraseña</ion-label>
-        <ion-input formControlName="clave" type="password" placeholder="Ingrese contraseña"></ion-input>
-      </ion-item>
-      <ion-button type="submit" expand="full" [disabled]="usuario.valid" >Ingresar</ion-button>
-      <ion-button expand="full">Crear Cuenta</ion-button>
-      <ion-button expand="full">Olvide mi contraseña</ion-button>
-    </ion-card>
-  </form>
+  <div>
+    <img src="../../../assets/img/login.webp" alt="">
+   </div>
+   <div>
+     <ion-list>
+      <ion-item> <ion-input [(ngModel)]="usuario" label="Usuario:" placeholder="ingrese usuario"></ion-input></ion-item>
+      <ion-item> <ion-input [(ngModel)]="contrasena" type="password" label="Contraseña:" placeholder="ingrese contraseña"></ion-input></ion-item>
+      <ion-button expand="full"(click)="validar()">Aceptar</ion-button>
+      <ion-button  routerLink="/crear" expand="full">Crear Cuenta</ion-button>
+      <ion-button routerLink="/olvide" expand="full">Olvide mi contraseña</ion-button>
+     </ion-list>
+   </div>
 
 </ion-content>

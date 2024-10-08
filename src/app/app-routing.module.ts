@@ -31,6 +31,27 @@ const routes: Routes = [
     path: 'crear',
     loadChildren: () => import('./pages/crear/crear.module').then( m => m.CrearPageModule)
   },
+  {
+    path: 'geo',
+    loadChildren: () => import('./pages/geo/geo.module').then( m => m.GeoPageModule)
+  },
+  {
+    path: 'anime',
+    loadChildren: () => import('./pages/anime/anime.module').then( m => m.AnimePageModule)
+  },
+  {
+    path: 'geo-pasajero',
+    loadChildren: () => import('./pages/geo-pasajero/geo-pasajero.module').then( m => m.GeoPasajeroPageModule)
+  },
+  {
+    path: 'pasajero',
+    loadChildren: () => import('./pages/pasajero/pasajero.module').then( m => m.PasajeroPageModule)
+  },
+  {
+    path: 'conductor',
+    loadChildren: () => import('./pages/conductor/conductor.module').then( m => m.ConductorPageModule)
+  },
+
 ];
 
 @NgModule({

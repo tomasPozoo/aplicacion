@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <div class="driver-info">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Conductor: Juan Pérez</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Patente: DY XS 89</p>
+        <p>Modelo: Toyota Prius</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- Lista de viajes asignados -->
+  <div class="assigned-trips">
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          <h2>Pasajero: Carlos López</h2>
+          <p>Destino: Metro Vicente Valdés</p>
+          <p>Hora: 2:30 PM</p>
+        </ion-label>
+        <ion-button expand="full" (click)="iniciarViaje()">Iniciar Viaje</ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <h2>Pasajero: María González</h2>
+          <p>Destino: Plaza Italia</p>
+          <p>Hora: 3:00 PM</p>
+        </ion-label>
+        <ion-button expand="full" (click)="iniciarViaje()">Iniciar Viaje</ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!-- Botón para terminar el viaje -->
+  <div class="end-trip-button">
+    <ion-button expand="full" color="danger" routerLink="/anime" (click)="terminarViaje()">Terminar Viaje</ion-button>
+  </div>
+</ion-content>
+

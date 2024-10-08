@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <div ><ion-header [translucent]="true">
+      <ion-toolbar>
+        <ion-title>Mapa</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    
+    <ion-content [fullscreen]="true">
+      <!-- Contenedor para la imagen y el formulario -->
+      <div class="container">
+        
+        <!-- Imagen arriba -->
+        <div class="image-container">
+          <img src="assets/img/mapa.png" alt="Imagen del mapa" class="image" />
+        </div>
+    
+        <!-- Formulario debajo de la imagen -->
+        <div class="form-container" >
+          <ion-list>
+            <!-- Campo de Hora de inicio del viaje -->
+            <ion-item>
+              <ion-label position="floating">Viajes</ion-label>
+              <h6>Hora inicio: 2:30 PM</h6>
+              <h6>Destino: Metro Vicente Valdes</h6>
+              <h6>Tarifa: $3000</h6>
+              <ion-button routerLink="/pasajero" expand="full">Agendar</ion-button>
+            </ion-item>
+    
+            <!-- Campo de destino -->
+            <ion-item>
+              <ion-label position="floating"></ion-label>
+              <h6>Hora inicio: 2:30 PM</h6>
+              <h6>Destino: Metro Vicente Valdes</h6>
+              <h6>Tarifa: $3000</h6>
+              <ion-button routerLink="/pasajero" expand="full">Agendar</ion-button>
+            </ion-item>
+    
+            <!-- Campo de tarifa -->
+            <ion-item>
+              <ion-label position="floating"></ion-label>
+              <h6>Hora inicio: 2:30 PM</h6>
+              <h6>Destino: Metro Vicente Valdes</h6>
+              <h6>Tarifa: $3000</h6>
+              <ion-button routerLink="/pasajero" expand="full">Agendar</ion-button>
+
+            </ion-item>
+          </ion-list>
+        </div>
+    
+      </div>
+    </ion-content>
+    </div>
+    <div ></div>
+  </div>
+</ion-content>

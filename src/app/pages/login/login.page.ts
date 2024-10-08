@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { NavController,AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -10,35 +8,32 @@ import { AlertController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  //variable
-  usuario = new FormGroup({
-    correo:  new FormControl('',[Validators.required,Validators.email]),
-    clave:  new FormControl('',[Validators.required,Validators.minLength(6)])
-  });
+  usuario:string=''
+  contrasena:string=''
 
-  constructor(private router: Router,private alertController: AlertController) { }
+  constructor(private navCtrl:NavController,
+    private alertCtrl:AlertController) { }
 
   ngOnInit() {
   }
-  ///metodo ingresar
-  ingresar(){
 
-    if(this.usuario.controls.correo.value =='admin@admin.cl' && this.usuario.controls.clave.value == 'administrador'){
-      this.router.navigate(['/home']);
-
-    }else{
-      this.mensajeAlerta();
+  validar(){
+    if (this.contrasena=="123" && this.usuario=="tomas") {
+      localStorage.setItem("usuario",this.usuario)
+      this.navCtrl.navigateForward(['/home'])
+    } else {
+      this.presentAlert()
     }
   }
-   async mensajeAlerta(){
-    const alert = await this.alertController.create({
-      message:'ERROR AL INGRESAR'
+
+  async presentAlert() {
+    const alert = await this.alertCtrl.create({
+      header: 'Usuario o contraseña incorrecta',
+      subHeader: '',
+      message: 'usuario o contraseña incorrecta',
+      buttons: ['Action'],
     });
-    alert.present();
+
+    await alert.present();
   }
-
-
-
-
-
 }
