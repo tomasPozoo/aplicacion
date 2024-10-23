@@ -14,4 +14,6 @@ describe('AnimePage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });
+
